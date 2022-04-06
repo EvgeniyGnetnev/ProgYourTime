@@ -22,10 +22,5 @@ namespace ProgYourTime.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
     }
 }

@@ -1,11 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>@ViewData["Title"]ProgYourTime</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+    @await Html.PartialAsync("MetatagsPartial.cshtml")
+    @await Html.PartialAsync("CssPartial.cshtml")
 </head>
 
 <body class="landing is-preload">
@@ -14,129 +11,16 @@
     <div id="page-wrapper">
 
         <!-- Header -->
-        <header id="header" class="alt">
-            <h1><a href="index.html">Prog Your Time</a></h1>
-            <nav id="nav">
-                <ul>
-                    <li class="special">
-                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                        <div id="menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Sign Up</a></li>
-                                <li><a href="#">Log In</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Banner -->
-        <section id="banner">
-            <div class="inner">
-                <h2>Prog Your Time</h2>
-                <p>
-                    Мы поможем тебе легко<br />
-                    и удобно следить за питанием<br />
-                </p>
-                <ul class="actions special">
-                    <li><a href="#" class="button primary">Начать!</a></li>
-                </ul>
-            </div>
-            <a href="#one" class="more scrolly">Узнать больше</a>
-        </section>
-
-        <!-- One -->
-        <section id="one" class="wrapper style1 special">
-            <div class="inner">
-                <header class="major">
-                    <h2>
-                        Начни следить за своим питанием<br />
-                        <span style="color: coral">прямо сейчас!</span>
-                    </h2>
-                    <p>
-                        Больше нет оправданий. Действуй!<br />
-                        Приведи себя в форму к лету!
-                    </p>
-                </header>
-                <ul class="icons major">
-                    <li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-                    <li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-                    <li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Two -->
-        <section id="two" class="wrapper alt style2">
-            <section class="spotlight">
-                <div class="image"><img src="/images/pic1.jpg" alt="" /></div><div class="content">
-                    <h2>
-                        Очень<br />
-                        удобный интерфейс
-                    </h2>
-                    <p>Поможет тебе удобно и быстро записать всю информацию.</p>
-                </div>
-            </section>
-            <section class="spotlight">
-                <div class="image"><img src="/images/pic2.jpg" alt="" /></div><div class="content">
-                    <h2>
-                        Портативность
-                    </h2>
-                    <p>Добавляй записи где бы ты ни был.</p>
-                </div>
-            </section>
-            <section class="spotlight">
-                <div class="image"><img src="/images/pic3.jpg" alt="" /></div><div class="content">
-                    <h2>
-                        Отслеживай<br />
-                        весь прогресс
-                    </h2>
-                    <p>Удобный и понятный график поможет тебе следить за твоим весом.</p>
-                </div>
-            </section>
-        </section>
+        @await Html.PartialAsync("HeaderPartial.cshtml")
 
 
-        <!-- CTA -->
-        <section id="cta" class="wrapper style4">
-            <div class="inner">
-                <header>
-                    <h2>Начни прямо сейчас</h2>
-                    <p>Следи за питанием легко и удобно.</p>
-                </header>
-                <ul class="actions stacked">
-                    <li><a href="#" class="button fit primary">Начать!</a></li>
-                    <li><a href="#" class="button fit">Узнать больше</a></li>
-                </ul>
-            </div>
-        </section>
+        @RenderBody()
 
         <!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
-                <li><a href="#" class="icon brands fa-vk"><span class="label">VK</span></a></li>
-                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
-            <ul class="copyright">
-                <li>&copy; ProgYourTime</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
-            @RenderBody()
-        </footer>
+        @await Html.PartialAsync("FooterPartial.cshtml")
     </div>
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrollex.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/browser.min.js"></script>
-    <script src="js/breakpoints.min.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/main.js"></script>
-
+    <!--Scripts-->
+    @await Html.PartialAsync("ScriptsPartial.cshtml")
 </body>
 </html>
