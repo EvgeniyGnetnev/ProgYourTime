@@ -10,6 +10,9 @@ namespace ProgYourTime.UserArea.Entities
     {
         protected EntityBase() => DateAdded = DateTime.UtcNow;
 
+        [Required]
+        public Guid Id { get; set; }
+
         [Display(Name = "ID пользователя")]
         public virtual string UserID { get; set; }
 
