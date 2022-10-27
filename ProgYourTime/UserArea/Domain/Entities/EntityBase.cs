@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgYourTime.UserArea.Entities
 {
-    public class EntityBase
+    /*public class EntityBase
     {
         protected EntityBase() => DateAdded = DateTime.UtcNow;
 
@@ -22,5 +22,5 @@ namespace ProgYourTime.UserArea.Entities
         [Required(ErrorMessage = "Заполните поле Текущий вес")]
         [Display(Name = "Текущий вес")]
         public virtual float CurWeight { get; set; }
-    }
+    }*/
 }
