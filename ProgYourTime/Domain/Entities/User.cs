@@ -10,8 +10,11 @@ namespace ProgYourTime.UserArea.Domain.Entities
     {
         [Required]
         public Guid UserId { get; set; }
+        [Required(ErrorMessage = "Заполните поле Логин")]
         public string Login { get; set; }
+        [Required(ErrorMessage = "Заполните поле Email")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Заполните поле Пароль")]
         public string Password { get; set; }
     }
 }
