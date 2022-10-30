@@ -9,7 +9,7 @@ using ProgYourTime.UserArea.Domain;
 
 namespace ProgYourTime.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(ApplicationContext))]
     [Migration("20221027142526_InitialCreate")]
     partial class InitialCreate
     {

@@ -9,16 +9,13 @@ using System.Threading.Tasks;
 
 namespace ProgYourTime.UserArea.Domain
 {
-    public class AppDbContext : DbContext
+    public class ApplicationContext : IdentityDbContext<IdentityUser>
     {
-        public DbSet<User> Users { get; set; } = null!;
-        public AppDbContext()
-        {
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=ProgYourTime; Persist Security Info=false; User ID=sa;Password=sa;MultipleActiveResultSets=True;Trusted_Connection=False;");
-        }
+        }*/
 
     }
 }

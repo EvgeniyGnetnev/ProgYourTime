@@ -13,6 +13,7 @@ namespace ProgYourTime.Domain.Entities
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         [Required(ErrorMessage = "Заполните поле Вид деятельности")]
+        [MaxLength(40)]
         public string Activity { get; set; }
     }
 }
