@@ -3,6 +3,14 @@
     ViewData["Title"] = "";
 }
 
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@User.Identity.Name</p>
+
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+    </form>
+}
 
 <!-- Banner -->
 <section id="banner">
@@ -13,7 +21,7 @@
             Присоединяйся!<br />
         </p>
         <ul class="actions special">
-            <li><a href="#" class="button primary">Начать</a></li>
+            <li><a asp-controller="Account" asp-action="Register" class="button primary">Начать</a></li>
         </ul>
     </div>
     <a href="#one" class="more scrolly">Узнать больше</a>
@@ -78,7 +86,7 @@
             <p>Следи за своим временем легко и удобно.</p>
         </header>
         <ul class="actions stacked">
-            <li><a href="#" class="button fit primary">Войти</a></li>
+            <li><a asp-controller="Account" asp-action="Login" class="button fit primary">Войти</a></li>
 
             <li><a asp-controller="Account" asp-action="Register" class="button fit primary">Регистрация</a></li>
 
